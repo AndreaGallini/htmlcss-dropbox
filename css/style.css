@@ -5,6 +5,7 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 :root{
     /* Colori */
@@ -25,14 +26,14 @@ body{
     --blue-hover:#5771F9;
 }
 .container{
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
-    min-width: 800px;
+    
 }
 .container-small{
-    max-width:1000px;
+    width:1000px;
     margin: 0 auto;
-    min-width: 800px;
+    
 }
 .w-30{
     width: 30%;
@@ -78,7 +79,7 @@ a{
     background-color:var(--blue-hover)
     
 }
-header li:hover{
+header .hover-gray:hover{
     background-color: var(--gray);
 }
 
@@ -274,38 +275,31 @@ input{
 }
 .box-container{
     margin-top: 100px;
-    width: 100vw;
+    min-width: 1000px;
     display: flex;
+
     /* max-height: 600px; */
 }
 
 .box-inner{
-    /* width: 30vw; */
+    width: 30vw;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    min-width: 30vw;
 }
 .box-center{
-    /* width: calc(100% - 60vw); */
-
-    overflow: hidden;
+    width: calc(100% - 60vw);
+    background-color: var(--gray);
+    height: 30vw;
     overflow-y: auto;
-    min-width: calc(100% - 60vw);
 }
 
 .box-container .box{
     width: 15vw;
     height: 15vw;
-    /* background-color: red; */
 }
-.box-container .box-center{
-    background-color: var(--gray);
-    width: calc(100% -20vw);
-    
-}
+
 .box svg{
-    color: white;
     width: 50%;
     filter: invert(100%);
 }
@@ -313,6 +307,7 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
 }
 .box-center h2{
     font-size: 60px;
@@ -325,6 +320,9 @@ input{
 #wipro{
     font-weight: bold;
 }
+.box-center .nopadding{
+    padding-top: 0;
+}
 .box-center p{
     padding-top: 40px;
     padding-bottom: 40px;
@@ -332,8 +330,8 @@ input{
 .box-center hr{
     width: 40px;
     height: 1px;
-    border: 1px solid black;
-
+    border: 1px solid var(--gray-text);
+    background-color: var(--gray-text);
 }
 .dropbox-inside{
     padding-top: 100px;
@@ -446,6 +444,10 @@ input{
 }
 .lingua{
     padding-top: 30px;
+}
+.a-team:hover{
+    color: var(--red);
+    text-decoration: underline;
 }
 #designit{
     background-color: var(--lime-green);
