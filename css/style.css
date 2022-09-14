@@ -591,7 +591,7 @@ a i{
     
 
 }
-main{
+.sfondo-gray{
     background-color: var(--bonus-dark-grey);
 }
 .box-img{
